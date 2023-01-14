@@ -37,13 +37,15 @@ public class Solution {
         for (int i = 0; i < best.size() - 1; i++) {
             Student student = best.get(i);
             Student student1 = best.get(i + 1);
-            if (student.course == student1.course && student.sex.equals("Мужской") == student1.sex.equals("Мужской") || student.sex.equals("Женский") == student1.sex.equals("Женский")) {
-                if (student.averageScore < student1.averageScore) {
-                    best.remove(student);
-                    i = -1;
-                } else {
-                    best.remove(student1);
-                    i = -1;
+            if (student.course == student1.course) {
+                if (student.sex.equals("Мужской") == student1.sex.equals("Мужской") || student.sex.equals("Женский") == student1.sex.equals("Женский")) {
+                    if (student.averageScore < student1.averageScore) {
+                        best.remove(student);
+                        i = -1;
+                    } else {
+                        best.remove(student1);
+                        i = -1;
+                    }
                 }
             }
         }
