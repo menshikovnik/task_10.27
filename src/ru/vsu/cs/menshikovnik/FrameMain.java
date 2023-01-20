@@ -172,7 +172,7 @@ public class FrameMain extends JFrame {
                     }
                     JTableUtils.writeArrayToJTable(tableOutput, arrOut);
                 } catch (Exception e) {
-                    SwingUtils.showErrorMessageBox(e);
+                     SwingUtils.showErrorMessageBox(e);
                 }
             }
         });

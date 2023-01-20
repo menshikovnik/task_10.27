@@ -61,7 +61,7 @@ public class Solution {
                 }
             }
         }
-        for (int i = 0; i < best.size() - 1; ) {
+        for (int i = 0; i < best.size() - 1; ){
             Student student = best.get(i);
             Student student1 = best.get(i + 1);
             if (student.course == student1.course) {
