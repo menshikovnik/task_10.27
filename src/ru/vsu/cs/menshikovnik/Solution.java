@@ -16,8 +16,6 @@ public class Solution {
             if (student.sex.equals("Женский")) {
                 woman.add(student);
             }
-        }
-        for (Student student : list) {
             if (student.sex.equals("Мужской")) {
                 men.add(student);
             }
@@ -67,6 +65,9 @@ public class Solution {
             Student student = best.get(i);
             Student student1 = best.get(i + 1);
             if (student.course == student1.course) {
+                if (i == best.size() - 2) {
+                    break;
+                }
                 i += 2;
                 student = best.get(i);
                 if (i != best.size() - 1) student1 = best.get(i + 1);
